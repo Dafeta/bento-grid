@@ -3,33 +3,149 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <title>Frontend Mentor | Bento grid</title>
 
   <style>
+    @font-face {
+      font-family: 'DMSans-Medium';
+      src: url('./assets/fonts/static/DMSans-Medium.ttf') format('truetype');
+      font-weight: 500;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'DMSans-MediumItalic';
+      src: url('./assets/fonts/static/DMSans-MediumItalic.ttf') format('truetype');
+      font-weight: 500;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'DMSans-Regular';
+      src: url('./assets/fonts/static/DMSans-Regular.ttf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'DMSans-Italic-Variable';
+      src: url('./assets/fonts/DMSans-Italic-VariableFont_opsz\,wght.ttf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'DMSans-Variable';
+      src: url('./assets/fonts/DMSans-VariableFont_opsz\,wght.ttf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    .font-medium {
+       font-family: 'DMSans-Medium', sans-serif;
+    }
+
+    .font-medium-italic {
+       font-family: 'DMSans-MediumItalic', sans-serif;
+    }
+
+    .font-regular {
+       font-family: 'DMSans-Regular', sans-serif;
+    }
+
+    .font-italic {
+       font-family: 'DMSans-Italic-Variable', sans-serif;
+    }
+
+    .font-variable {
+       font-family: 'DMSans-Variable', sans-serif;
+    }
+
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
-<body>
+<body class="m-5 bg-[#f9eee1ff]">
+  <section>
+      <section class="mb-5 shadow-lg rounded-lg">
+        <div class="p-8 bg-[#7650dcff] rounded-lg flex flex-col items-center text-center">
+          <h2 class="font-medium text-[#ffffffff] text-3xl leading-none mb-4 flex-wrap">Social Media 
+          <span class="text-[#ffcb6bff]">10x</span> 
+          <span class="font-medium-italic">Faster</span> 
+           with AI</h2>
+          <div class="w-36">
+            <img src="assets/images/illustration-five-stars.webp" alt="five stars" class="w-full h-auto">
+          </div>
+          <p class="text-white font-regular">Over 4,000 5-star reviews</p>
+        </div>
+    </section>
 
-  Social Media 10x Faster with AI
-  Over 4,000 5-star reviews
+    <section class="shadow-lg rounded-lg">
+      <div class="bg-white rounded-lg p-4 mb-5">
+        <div class="mb-4 w-full">
+          <img src="./assets/images/illustration-multiple-platforms.webp" alt="multiple platforms" class="w-full h-auto">
+        </div>
+        <h3 class="font-medium text-xl leading-none mt-4">Manage multiple accounts and platforms.</h3>
+      </div>
+    </section>
 
-  Manage multiple accounts and platforms.
+    <section class="shadow-lg rounded-lg mb-5">
+      <div class="bg-[#ffcb6bff] p-3 pb-0 text-left flex flex-col justify-start  rounded-lg">
+        <h3 class="font-medium leading-none text-xl mb-4">Maintain a consistent posting schedule.</h3>
+        <div class="w-[70%]">
+          <img src="./assets/images/illustration-consistent-schedule.webp" alt="consistent schedule" class="w-full">
+        </div>
+      </div>
+    </section>
 
-  Maintain a consistent posting schedule.
+    <section class="shadow-lg rounded-lg mb-5">
+      <div class="bg-[#dacffcff] p-5 rounded-lg">
+        <h3 class="font-medium text-center text-lg mb-4">Schedule to social media.</h3>
+        <div class="w-full mb-4">
+          <img src="./assets/images/illustration-schedule-posts.webp" alt="schedule posts" class="w-full">
+        </div>
+        <p class="font-regular text-center leading-none">
+          Optimize post timings to publish content at the perfect time for your audience.
+        </p>
+      </div>
+    </section>
 
-  Schedule to social media.
-  Optimize post timings to publish content at the perfect time for your audience.
-  
-  Grow followers with non-stop content.
+    <section class="shadow-lg rounded-lg mb-5">
+      <div class="py-4 px-10 bg-[#7650dcff] rounded-lg">
+        <div class="w-full">
+          <img src="./assets/images/illustration-grow-followers.webp" alt="followers' growth" class="w-full">
+        </div>
+        <h3>Grow followers with non-stop content.</h3>
+      </div>
+    </section>
 
-  >56% faster audience growth
-  
-  Create and schedule content quicker.
+    <section>
+      <p>&gt;56%<br>faster audience growth</p>
+      <div>
+        <img src="./assets/images/illustration-audience-growth.webp" alt="audience growth">
+      </div>
+    </section>
 
-  Write your content using AI.
+    <section>
+      <div>
+        <h3>Create and schedule content <span>quicker.</span></h3>
+        <div>
+          <img src="./assets/images/illustration-create-post.webp" alt="create post button">
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div>
+        <h3>Write your content using AI.</h3>
+        <div>
+          <img src="./assets/images/illustration-ai-content.webp" alt="AI content">
+        </div>
+      </div>
+    </section>
+  </section>
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
