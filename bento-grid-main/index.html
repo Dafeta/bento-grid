@@ -7,6 +7,21 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <title>Frontend Mentor | Bento grid</title>
 
+  <!-- <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            purple: '#7650dcff',
+            light-purple: '#dacffcff',
+            yellow: '#dacffcff',
+            light-yellow: '#f9eee1ff',
+
+          }
+        }
+      }
+    }
+  </script> -->
   <style>
     @font-face {
       font-family: 'DMSans-Medium';
@@ -63,13 +78,19 @@
        font-family: 'DMSans-Variable', sans-serif;
     }
 
+    /* @layer components {
+      .section-box {
+        @apply mb-5 shadow-lg rounded-lg;
+      }
+    } */
+
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
-<body class="m-5 bg-[#f9eee1ff]">
-  <section>
-      <section class="mb-5 shadow-lg rounded-lg">
+<body class="m-5 bg-gray-50 p-6 md:10">
+  <section class="grid gap-6 p-6 grid-cols-1 md:grid-cols-4 border-4 border-red-500 border-solid bg-[#fefefe]">
+      <section class="shadow-lg rounded-lg md:col-start-2 md:col-end-4">
         <div class="p-8 bg-[#7650dcff] rounded-lg flex flex-col items-center text-center">
           <h2 class="font-medium text-[#ffffffff] text-3xl leading-none mb-4 flex-wrap">Social Media 
           <span class="text-[#ffcb6bff]">10x</span> 
@@ -78,12 +99,12 @@
           <div class="w-36">
             <img src="assets/images/illustration-five-stars.webp" alt="five stars" class="w-full h-auto">
           </div>
-          <p class="text-white font-regular">Over 4,000 5-star reviews</p>
+          <p class="text-[#f9eee1ff] font-regular">Over 4,000 5-star reviews</p>
         </div>
     </section>
 
     <section class="shadow-lg rounded-lg">
-      <div class="bg-white rounded-lg p-4 mb-5">
+      <div class="bg-white rounded-lg p-4">
         <div class="mb-4 w-full">
           <img src="./assets/images/illustration-multiple-platforms.webp" alt="multiple platforms" class="w-full h-auto">
         </div>
@@ -91,7 +112,7 @@
       </div>
     </section>
 
-    <section class="shadow-lg rounded-lg mb-5">
+    <section class="shadow-lg rounded-lg">
       <div class="bg-[#ffcb6bff] p-3 pb-0 text-left flex flex-col justify-start  rounded-lg">
         <h3 class="font-medium leading-none text-xl mb-4">Maintain a consistent posting schedule.</h3>
         <div class="w-[70%]">
@@ -100,51 +121,56 @@
       </div>
     </section>
 
-    <section class="shadow-lg rounded-lg mb-5">
-      <div class="bg-[#dacffcff] p-5 rounded-lg">
-        <h3 class="font-medium text-center text-lg mb-4">Schedule to social media.</h3>
-        <div class="w-full mb-4">
+    <section class="shadow-lg rounded-lg">
+      <div class="bg-[#dacffcff] p-5 md:!pr-0 rounded-lg text-center md:text-left flex flex-col">
+        <h3 class="font-medium text-lg mb-4 leading-none">Schedule to social media.</h3>
+        <div class="w-full mb-4 ">
           <img src="./assets/images/illustration-schedule-posts.webp" alt="schedule posts" class="w-full">
         </div>
-        <p class="font-regular text-center leading-none">
+        <p class="font-regular leading-none md:text-sm">
           Optimize post timings to publish content at the perfect time for your audience.
         </p>
       </div>
     </section>
 
-    <section class="shadow-lg rounded-lg mb-5">
+    <section class="shadow-lg rounded-lg">
       <div class="py-4 px-10 bg-[#7650dcff] rounded-lg">
-        <div class="w-full">
+        <div class="w-full mb-8">
           <img src="./assets/images/illustration-grow-followers.webp" alt="followers' growth" class="w-full">
         </div>
-        <h3>Grow followers with non-stop content.</h3>
+        <h3 class="font-medium text-white text-center text-2xl leading-none">Grow followers with non-stop content.</h3>
       </div>
     </section>
 
-    <section>
-      <p>&gt;56%<br>faster audience growth</p>
-      <div>
-        <img src="./assets/images/illustration-audience-growth.webp" alt="audience growth">
-      </div>
-    </section>
-
-    <section>
-      <div>
-        <h3>Create and schedule content <span>quicker.</span></h3>
-        <div>
-          <img src="./assets/images/illustration-create-post.webp" alt="create post button">
+    <section class="shadow-lg rounded-lg">
+      <div class="bg-white rounded-lg p-4 mb-5">
+        <p class="font-medium text-3xl mb-3">&gt;56%</p>
+        <p class="font-regular text-sm mb-4">faster audience growth</p>
+        <div class="w-[50%]">
+          <img src="./assets/images/illustration-audience-growth.webp" alt="audience growth" class="w-full">
         </div>
       </div>
     </section>
 
-    <section>
-      <div>
-        <h3>Write your content using AI.</h3>
-        <div>
-          <img src="./assets/images/illustration-ai-content.webp" alt="AI content">
+    <section class="shadow-lg rounded-lg">
+      <div class="bg-[#f9eee1ff] p-5 rounded-lg">
+        <h3 class="font-medium text-2xl leading-none mb-5 text-left">Create and schedule content <span class="text-[#7650dcff] font-medium-italic">quicker.</span></h3>
+        <div class="w-[50%]">
+          <img src="./assets/images/illustration-create-post.webp" alt="create post button" class="w-full">
         </div>
       </div>
     </section>
+
+    <section class="shadow-lg rounded-lg">
+      <div class="bg-[#ffcb6bff] p-4 rounded-lg text-left">
+        <h3 class="font-medium text-2xl leading-none mb-4">Write your content using AI.</h3>
+        <div class="w-[50%]">
+          <img src="./assets/images/illustration-ai-content.webp" alt="AI content" class="w-full">
+        </div>
+      </div>
+    </section>
+
+    <!-- dfghjkl -->
   </section>
   
   <div class="attribution">
